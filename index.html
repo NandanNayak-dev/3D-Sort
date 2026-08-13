@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Sorting Visualizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="canvas-container"></div>
+  
+  <div id="ui-container">
+    <div class="control-panel">
+      
+      <div>
+        <h1 class="gradient-text">3D SORTING</h1>
+        <h1 class="gradient-text">VISUALIZER</h1>
+        <p class="subtitle">Algorithm Animation</p>
+      </div>
+      
+      <div class="control-group">
+        <div class="input-group">
+          <label>Algorithm</label>
+          <select id="algo-select">
+            <option value="bubble">Bubble Sort</option>
+            <option value="selection">Selection Sort</option>
+            <option value="insertion">Insertion Sort</option>
+            <option value="merge">Merge Sort</option>
+          </select>
+        </div>
+        
+        <div class="input-group">
+          <label>Size <span class="val" id="size-label">20</span></label>
+          <input type="range" id="size-slider" min="5" max="80" value="20">
+        </div>
+        
+        <div class="input-group">
+          <label>Speed <span class="val" id="speed-label">Fast</span></label>
+          <input type="range" id="speed-slider" min="1" max="100" value="80">
+        </div>
+      </div>
+      
+      <div class="actions">
+        <button id="generate-btn">Randomize Array</button>
+        <button id="sort-btn">SORT</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
